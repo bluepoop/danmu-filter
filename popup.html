@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>剧透过滤器设置</title>
+  <style>
+    body {
+      width: 320px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+    }
+    .status { margin-bottom: 16px; }
+    .input-group { margin-bottom: 12px; }
+    label { display: block; margin-bottom: 4px; font-weight: bold; }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #00a1d6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+    button:hover { background: #0090c0; }
+    .toggle-btn { background: #67c23a; }
+    .toggle-btn.disabled { background: #f56c6c; }
+  </style>
+</head>
+<body>
+  <div class="status">
+    <h3>过滤器状态</h3>
+    <p>缓存大小: <span id="cacheSize">0</span></p>
+    <p>API状态: <span id="apiStatus">未配置</span></p>
+  </div>
+  
+  <div class="input-group">
+    <label>Kimi API Key:</label>
+    <input type="text" id="apiKey" placeholder="输入你的API Key">
+  </div>
+  
+  <button id="saveBtn">保存设置</button>
+  <button id="toggleBtn" class="toggle-btn">开启过滤</button>
+  <button id="reanalyzeBtn">重新分析</button>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

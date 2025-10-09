@@ -1,0 +1,28 @@
+.spoiler-filter-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 16px 24px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  border-radius: 8px;
+  z-index: 999999;
+  opacity: 0;
+  transform: translateX(400px);
+  transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.spoiler-filter-notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.spoiler-filter-notification.success {
+  background: rgba(103, 194, 58, 0.95);
+}
+
+.spoiler-filter-notification.error {
+  background: rgba(245, 108, 108, 0.95);
+}
